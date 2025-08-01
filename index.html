@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Cultura General</title>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="css/estilos-principales.css">
+    <link rel="stylesheet" href="css/estilos-quiz.css">
+    <link rel="stylesheet" href="css/estilos-responsive.css">
+</head>
+<body>
+    <!-- Pantalla de Login (nueva) -->
+    <section id="pantalla-login" class="pantalla activa">
+        <div class="contenedor-login">
+            <div class="tarjeta-login">
+                <h1 class="titulo-login">🌌 Quiz Cultura General</h1>
+                <p class="subtitulo-login">Inicia sesión para comenzar</p>
+                
+                <form id="form-login" class="formulario-login">
+                    <div class="campo-login">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+                    </div>
+                    
+                    <div class="campo-login">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña">
+                    </div>
+                    
+                    <button type="submit" class="boton-login">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Encabezado principal de la página -->
+    <header class="encabezado-principal">
+        <div class="contenedor-encabezado">
+            <h1 class="titulo-principal">🌌 Quiz Cultura General</h1>
+            <p class="subtitulo">Descubre los misterios del Sistema Solar</p>
+        </div>
+    </header>
+
+    <!-- Contenedor principal de la aplicación -->
+    <main class="contenedor-principal">
+        <!-- Pantalla de inicio del quiz -->
+        <section id="pantalla-inicio" class="pantalla">
+            <div class="tarjeta-bienvenida">
+                <h2 class="titulo-bienvenida">¡Bienvenido al Quiz de Cultura General!</h2>
+                <p class="descripcion-quiz">Pon a prueba tus conocimientos sobre el Sistema Solar y la astronomía</p>
+                
+                <!-- Selector de nivel de dificultad -->
+                <div class="selector-nivel">
+                    <h3 class="titulo-nivel">Selecciona tu nivel:</h3>
+                    <div class="botones-nivel">
+                        <button class="boton-nivel" data-nivel="facil">
+                            <span class="icono-nivel">🌟</span>
+                            <span class="texto-nivel">Fácil</span>
+                            <span class="descripcion-nivel">Preguntas básicas</span>
+                        </button>
+                        <button class="boton-nivel" data-nivel="intermedio">
+                            <span class="icono-nivel">🚀</span>
+                            <span class="texto-nivel">Intermedio</span>
+                            <span class="descripcion-nivel">Conocimientos generales</span>
+                        </button>
+                        <button class="boton-nivel" data-nivel="dificil">
+                            <span class="icono-nivel">🛸</span>
+                            <span class="texto-nivel">Difícil</span>
+                            <span class="descripcion-nivel">Para expertos</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pantalla del quiz en progreso -->
+        <section id="pantalla-quiz" class="pantalla">
+            <!-- Barra de progreso -->
+            <div class="barra-progreso-contenedor">
+                <div class="informacion-progreso">
+                    <span id="pregunta-actual">1</span>/<span id="total-preguntas">30</span>
+                    <span class="nivel-actual" id="nivel-mostrado">Fácil</span>
+                </div>
+                <div class="barra-progreso">
+                    <div class="progreso-relleno" id="barra-relleno"></div>
+                </div>
+            </div>
+
+            <!-- Contenedor de la pregunta -->
+            <div class="contenedor-pregunta">
+                <div class="imagen-pregunta" id="imagen-pregunta">
+                    <!-- La imagen se cargará dinámicamente -->
+                </div>
+                <h2 class="texto-pregunta" id="texto-pregunta">
+                    <!-- El texto se cargará dinámicamente -->
+                </h2>
+            </div>
+
+            <!-- Contenedor de las opciones de respuesta -->
+            <div class="contenedor-opciones" id="contenedor-opciones">
+                <!-- Las opciones se generarán dinámicamente -->
+            </div>
+
+            <!-- Contenedor de retroalimentación -->
+            <div class="contenedor-retroalimentacion" id="contenedor-retroalimentacion">
+                <div class="retroalimentacion" id="retroalimentacion">
+                    <!-- El mensaje se mostrará dinámicamente -->
+                </div>
+                <button class="boton-siguiente" id="boton-siguiente">Siguiente →</button>
+            </div>
+        </section>
+
+        <!-- Pantalla de resultados finales -->
+        <section id="pantalla-resultados" class="pantalla">
+            <div class="tarjeta-resultados">
+                <h2 class="titulo-resultados">¡Quiz Completado!</h2>
+                
+                <!-- Puntuación final -->
+                <div class="puntuacion-final">
+                    <div class="circulo-puntuacion" id="circulo-puntuacion">
+                        <span class="porcentaje-puntuacion" id="porcentaje-puntuacion">0%</span>
+                    </div>
+                    <div class="detalles-puntuacion">
+                        <p class="respuestas-correctas">Respuestas correctas: <span id="correctas-final">0</span>/30</p>
+                        <p class="nivel-completado">Nivel: <span id="nivel-final">Fácil</span></p>
+                        <p class="mensaje-rendimiento" id="mensaje-rendimiento">¡Buen trabajo!</p>
+                    </div>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="botones-finales">
+                    <button class="boton-reiniciar" id="boton-reiniciar">🔄 Intentar de nuevo</button>
+                    <button class="boton-cambiar-nivel" id="boton-cambiar-nivel">🎯 Cambiar nivel</button>
+                    <button class="boton-logout" id="boton-logout">🚪 Cerrar Sesión</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <p class="texto-pie">Quiz astronomía - Cultura General - Maudiel López Dávila</p>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/datos-preguntas.js"></script>
+    <script src="js/utilidades.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/logica-quiz.js"></script>
+</body>
+</html>

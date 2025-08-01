@@ -1,0 +1,351 @@
+/* Estilos específicos para la interfaz del quiz */
+
+/* Selector de nivel de dificultad */
+.selector-nivel {
+    margin-top: 2rem; /* Margen superior */
+}
+
+/* Título del selector de nivel */
+.titulo-nivel {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    margin-bottom: 1.5rem; /* Margen inferior */
+    color: var(--color-texto-claro); /* Color claro */
+    font-weight: 500; /* Peso de fuente medio */
+}
+
+/* Contenedor de botones de nivel */
+.botones-nivel {
+    display: grid; /* Usar CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas responsivas */
+    gap: 1.5rem; /* Espacio entre elementos */
+    margin-bottom: 2rem; /* Margen inferior */
+}
+
+/* Botones de nivel individuales */
+.boton-nivel {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borde semi-transparente */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    padding: 1.5rem; /* Padding interno */
+    color: var(--color-texto-claro); /* Color de texto claro */
+    cursor: pointer; /* Cursor de mano */
+    transition: all 0.3s ease; /* Transición suave */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Dirección vertical */
+    align-items: center; /* Centrar horizontalmente */
+    gap: 0.5rem; /* Espacio entre elementos */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+/* Efecto hover en botones de nivel */
+.boton-nivel:hover {
+    transform: translateY(-5px); /* Elevar elemento */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    border-color: var(--color-dorado); /* Cambiar color del borde */
+    background: rgba(233, 69, 96, 0.2); /* Fondo con color de acento */
+}
+
+/* Icono del nivel */
+.icono-nivel {
+    font-size: 2rem; /* Tamaño del icono */
+    margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+/* Texto principal del nivel */
+.texto-nivel {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de fuente semi-grueso */
+    margin-bottom: 0.3rem; /* Margen inferior */
+}
+
+/* Descripción del nivel */
+.descripcion-nivel {
+    font-size: 0.9rem; /* Tamaño de fuente pequeño */
+    color: var(--color-texto-gris); /* Color gris */
+    text-align: center; /* Centrar texto */
+}
+
+/* Barra de progreso del quiz */
+.barra-progreso-contenedor {
+    margin-bottom: 2rem; /* Margen inferior */
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 1.5rem; /* Padding interno */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+/* Información del progreso */
+.informacion-progreso {
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Distribuir espacio */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 1rem; /* Margen inferior */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    font-weight: 500; /* Peso de fuente medio */
+}
+
+/* Nivel actual mostrado */
+.nivel-actual {
+    background: var(--color-dorado); /* Fondo con color de acento */
+    color: white; /* Texto blanco */
+    padding: 0.3rem 0.8rem; /* Padding pequeño */
+    border-radius: 20px; /* Bordes muy redondeados */
+    font-size: 0.9rem; /* Tamaño de fuente pequeño */
+    font-weight: 600; /* Peso de fuente semi-grueso */
+}
+
+/* Contenedor de la barra de progreso */
+.barra-progreso {
+    width: 100%; /* Ancho completo */
+    height: 8px; /* Altura de la barra */
+    background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    border-radius: 4px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar desbordamiento */
+}
+
+/* Relleno del progreso */
+.progreso-relleno {
+    height: 100%; /* Altura completa */
+    background: linear-gradient(90deg, var(--color-dorado), #ff6b9d); /* Gradiente */
+    width: 0%; /* Ancho inicial */
+    transition: width 0.5s ease; /* Transición suave del ancho */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Contenedor de la pregunta */
+.contenedor-pregunta {
+    margin-bottom: 2rem; /* Margen inferior */
+    text-align: center; /* Centrar texto */
+}
+
+/* Contenedor de imagen de la pregunta */
+.imagen-pregunta {
+    margin-bottom: 1.5rem; /* Margen inferior */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Imagen dentro del contenedor */
+.imagen-pregunta img {
+    max-width: 100%; /* Ancho máximo responsive */
+    max-height: 300px; /* Altura máxima */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    box-shadow: var(--sombra-principal); /* Aplicar sombra */
+    object-fit: cover; /* Ajustar imagen */
+}
+
+/* Texto de la pregunta */
+.texto-pregunta {
+    font-size: 1.4rem; /* Tamaño de fuente grande */
+    font-weight: 500; /* Peso de fuente medio */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: var(--color-texto-claro); /* Color claro */
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 1.5rem; /* Padding interno */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+/* Contenedor de opciones de respuesta */
+.contenedor-opciones {
+    display: grid; /* Usar CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 1rem; /* Espacio entre elementos */
+    margin-bottom: 2rem; /* Margen inferior */
+}
+
+/* Botones de opciones individuales */
+.opcion-respuesta {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borde semi-transparente */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    padding: 1.2rem; /* Padding interno */
+    color: var(--color-texto-claro); /* Color de texto claro */
+    cursor: pointer; /* Cursor de mano */
+    transition: all 0.3s ease; /* Transición suave */
+    font-size: 1rem; /* Tamaño de fuente */
+    text-align: center; /* Centrar texto */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    position: relative; /* Posición relativa para pseudo-elementos */
+}
+
+/* Efecto hover en opciones */
+.opcion-respuesta:hover {
+    transform: translateY(-3px); /* Elevar ligeramente */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    border-color: rgba(255, 255, 255, 0.4); /* Borde más visible */
+}
+
+/* Opción correcta */
+.opcion-respuesta.correcta {
+    background: rgba(76, 175, 80, 0.3); /* Fondo verde semi-transparente */
+    border-color: var(--color-correcto); /* Borde verde */
+    color: white; /* Texto blanco */
+}
+
+/* Opción incorrecta */
+.opcion-respuesta.incorrecta {
+    background: rgba(244, 67, 54, 0.3); /* Fondo rojo semi-transparente */
+    border-color: var(--color-incorrecto); /* Borde rojo */
+    color: white; /* Texto blanco */
+}
+
+/* Opción deshabilitada */
+.opcion-respuesta:disabled {
+    cursor: not-allowed; /* Cursor de no permitido */
+    opacity: 0.7; /* Reducir opacidad */
+}
+
+/* Contenedor de retroalimentación */
+.contenedor-retroalimentacion {
+    display: none; /* Ocultar por defecto */
+    margin-top: 1.5rem; /* Margen superior */
+}
+
+/* Contenedor visible de retroalimentación */
+.contenedor-retroalimentacion.visible {
+    display: block; /* Mostrar cuando sea visible */
+}
+
+/* Mensaje de retroalimentación */
+.retroalimentacion {
+    background: rgba(255, 255, 255, 0.15); /* Fondo semi-transparente */
+    padding: 1.5rem; /* Padding interno */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    margin-bottom: 1rem; /* Margen inferior */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    border-left: 4px solid var(--color-dorado); /* Borde izquierdo de acento */
+}
+
+/* Botón siguiente */
+.boton-siguiente {
+    background: var(--color-dorado); /* Fondo con color de acento */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 1rem 2rem; /* Padding interno */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de fuente semi-grueso */
+    cursor: pointer; /* Cursor de mano */
+    transition: all 0.3s ease; /* Transición suave */
+    display: block; /* Mostrar como bloque */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Efecto hover en botón siguiente */
+.boton-siguiente:hover {
+    background: #d63447; /* Color más oscuro */
+    transform: translateY(-2px); /* Elevar ligeramente */
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4); /* Sombra con color */
+}
+
+/* Tarjeta de resultados finales */
+.tarjeta-resultados {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    padding: 3rem; /* Padding interno */
+    text-align: center; /* Centrar texto */
+    box-shadow: var(--sombra-principal); /* Aplicar sombra */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde semi-transparente */
+}
+
+/* Título de resultados */
+.titulo-resultados {
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    font-weight: 600; /* Peso de fuente semi-grueso */
+    margin-bottom: 2rem; /* Margen inferior */
+    color: var(--color-texto-claro); /* Color claro */
+}
+
+/* Contenedor de puntuación final */
+.puntuacion-final {
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 2rem; /* Espacio entre elementos */
+    margin-bottom: 2rem; /* Margen inferior */
+    flex-wrap: wrap; /* Permitir salto de línea */
+}
+
+/* Círculo visual de puntuación */
+.circulo-puntuacion {
+    width: 120px; /* Ancho del círculo */
+    height: 120px; /* Altura del círculo */
+    border-radius: 50%; /* Hacer circular */
+    background: conic-gradient(var(--color-dorado) 0deg, var(--color-dorado) 0deg, rgba(255, 255, 255, 0.2) 0deg); /* Gradiente cónico */
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    position: relative; /* Posición relativa */
+}
+
+/* Porcentaje dentro del círculo */
+.porcentaje-puntuacion {
+    font-size: 1.5rem; /* Tamaño de fuente grande */
+    font-weight: 700; /* Peso de fuente grueso */
+    color: var(--color-texto-claro); /* Color claro */
+}
+
+/* Detalles de la puntuación */
+.detalles-puntuacion {
+    text-align: left; /* Alinear a la izquierda */
+}
+
+/* Párrafos de detalles */
+.detalles-puntuacion p {
+    margin: 0.5rem 0; /* Margen vertical */
+    font-size: 1.1rem; /* Tamaño de fuente */
+}
+
+/* Respuestas correctas */
+.respuestas-correctas {
+    color: var(--color-correcto); /* Color verde */
+    font-weight: 600; /* Peso de fuente semi-grueso */
+}
+
+/* Nivel completado */
+.nivel-completado {
+    color: var(--color-texto-gris); /* Color gris */
+}
+
+/* Mensaje de rendimiento */
+.mensaje-rendimiento {
+    color: var(--color-dorado); /* Color de acento */
+    font-weight: 600; /* Peso de fuente semi-grueso */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+}
+
+/* Contenedor de botones finales */
+.botones-finales {
+    display: flex; /* Usar flexbox */
+    gap: 1rem; /* Espacio entre elementos */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Permitir salto de línea */
+}
+
+/* Botones finales (reiniciar y cambiar nivel) */
+.boton-reiniciar,
+.boton-cambiar-nivel {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borde semi-transparente */
+    color: var(--color-texto-claro); /* Color de texto claro */
+    padding: 1rem 1.5rem; /* Padding interno */
+    border-radius: var(--radio-bordes); /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: 500; /* Peso de fuente medio */
+    cursor: pointer; /* Cursor de mano */
+    transition: all 0.3s ease; /* Transición suave */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+}
+
+/* Efecto hover en botones finales */
+.boton-reiniciar:hover,
+.boton-cambiar-nivel:hover {
+    background: var(--color-dorado); /* Fondo con color de acento */
+    border-color: var(--color-dorado); /* Borde con color de acento */
+    transform: translateY(-2px); /* Elevar ligeramente */
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.3); /* Sombra con color */
+}
+
+

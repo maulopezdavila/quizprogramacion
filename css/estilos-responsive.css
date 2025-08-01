@@ -1,0 +1,324 @@
+/* Estilos responsivos para diferentes tamaños de pantalla */
+
+/* Tablets grandes (máximo 1024px) */
+@media (max-width: 1024px) {
+    /* Reducir tamaño del título principal */
+    .titulo-principal {
+        font-size: 2.5rem; /* Tamaño más pequeño para tablets */
+    }
+    
+    /* Ajustar padding del contenedor principal */
+    .contenedor-principal {
+        padding: 1.5rem; /* Menos padding en tablets */
+    }
+    
+    /* Ajustar tarjeta de bienvenida */
+    .tarjeta-bienvenida {
+        padding: 2.5rem; /* Menos padding interno */
+    }
+    
+    /* Ajustar botones de nivel para tablets */
+    .botones-nivel {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Columnas más pequeñas */
+        gap: 1rem; /* Menos espacio entre elementos */
+    }
+}
+
+/* Tablets y móviles grandes (máximo 768px) */
+@media (max-width: 768px) {
+    /* Título principal más pequeño */
+    .titulo-principal {
+        font-size: 2rem; /* Tamaño reducido para móviles */
+    }
+    
+    /* Subtítulo ajustado */
+    .subtitulo {
+        font-size: 1rem; /* Tamaño más pequeño */
+    }
+    
+    /* Contenedor principal con menos padding */
+    .contenedor-principal {
+        padding: 1rem; /* Padding mínimo para móviles */
+        min-height: calc(100vh - 160px); /* Altura ajustada */
+    }
+    
+    /* Tarjeta de bienvenida responsiva */
+    .tarjeta-bienvenida {
+        padding: 2rem; /* Padding reducido */
+        margin: 0 0.5rem; /* Margen lateral pequeño */
+    }
+    
+    /* Título de bienvenida más pequeño */
+    .titulo-bienvenida {
+        font-size: 2rem; /* Tamaño reducido */
+    }
+    
+    /* Descripción del quiz ajustada */
+    .descripcion-quiz {
+        font-size: 1rem; /* Tamaño estándar */
+    }
+    
+    /* Botones de nivel en una columna */
+    .botones-nivel {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 1rem; /* Espacio entre elementos */
+    }
+    
+    /* Ajustar botones de nivel */
+    .boton-nivel {
+        padding: 1.2rem; /* Padding ajustado */
+    }
+    
+    /* Contenedor de opciones en una columna */
+    .contenedor-opciones {
+        grid-template-columns: 1fr; /* Una sola columna para opciones */
+        gap: 0.8rem; /* Menos espacio entre opciones */
+    }
+    
+    /* Opciones de respuesta ajustadas */
+    .opcion-respuesta {
+        padding: 1rem; /* Padding reducido */
+        font-size: 0.95rem; /* Tamaño de fuente ligeramente menor */
+    }
+    
+    /* Texto de pregunta responsivo */
+    .texto-pregunta {
+        font-size: 1.2rem; /* Tamaño más pequeño */
+        padding: 1.2rem; /* Padding reducido */
+    }
+    
+    /* Imagen de pregunta responsiva */
+    .imagen-pregunta img {
+        max-height: 200px; /* Altura máxima reducida */
+    }
+    
+    /* Puntuación final responsiva */
+    .puntuacion-final {
+        flex-direction: column; /* Cambiar a dirección vertical */
+        gap: 1.5rem; /* Espacio entre elementos */
+    }
+    
+    /* Círculo de puntuación más pequeño */
+    .circulo-puntuacion {
+        width: 100px; /* Ancho reducido */
+        height: 100px; /* Altura reducida */
+    }
+    
+    /* Porcentaje de puntuación ajustado */
+    .porcentaje-puntuacion {
+        font-size: 1.3rem; /* Tamaño más pequeño */
+    }
+    
+    /* Detalles de puntuación centrados */
+    .detalles-puntuacion {
+        text-align: center; /* Centrar en móviles */
+    }
+    
+    /* Botones finales responsivos */
+    .botones-finales {
+        flex-direction: column; /* Dirección vertical */
+        gap: 0.8rem; /* Menos espacio entre botones */
+    }
+    
+    /* Botones finales de ancho completo */
+    .boton-reiniciar,
+    .boton-cambiar-nivel {
+        width: 100%; /* Ancho completo en móviles */
+        padding: 1.2rem; /* Padding aumentado para mejor toque */
+    }
+}
+
+/* Móviles pequeños (máximo 480px) */
+@media (max-width: 480px) {
+    /* Título principal muy pequeño */
+    .titulo-principal {
+        font-size: 1.8rem; /* Tamaño muy reducido */
+    }
+    
+    /* Encabezado con menos padding */
+    .encabezado-principal {
+        padding: 1.5rem 0; /* Padding reducido */
+    }
+    
+    /* Contenedor de encabezado ajustado */
+    .contenedor-encabezado {
+        padding: 0 1rem; /* Padding lateral mínimo */
+    }
+    
+    /* Tarjeta de bienvenida muy compacta */
+    .tarjeta-bienvenida {
+        padding: 1.5rem; /* Padding mínimo */
+        margin: 0; /* Sin margen lateral */
+    }
+    
+    /* Título de bienvenida compacto */
+    .titulo-bienvenida {
+        font-size: 1.8rem; /* Tamaño muy reducido */
+        margin-bottom: 0.8rem; /* Menos margen inferior */
+    }
+    
+    /* Título de nivel más pequeño */
+    .titulo-nivel {
+        font-size: 1.3rem; /* Tamaño reducido */
+    }
+    
+    /* Botones de nivel muy compactos */
+    .boton-nivel {
+        padding: 1rem; /* Padding mínimo */
+    }
+    
+    /* Icono de nivel más pequeño */
+    .icono-nivel {
+        font-size: 1.5rem; /* Tamaño reducido */
+    }
+    
+    /* Texto de nivel ajustado */
+    .texto-nivel {
+        font-size: 1.1rem; /* Tamaño más pequeño */
+    }
+    
+    /* Barra de progreso compacta */
+    .barra-progreso-contenedor {
+        padding: 1rem; /* Padding reducido */
+        margin-bottom: 1.5rem; /* Menos margen inferior */
+    }
+    
+    /* Información de progreso compacta */
+    .informacion-progreso {
+        font-size: 1rem; /* Tamaño estándar */
+        margin-bottom: 0.8rem; /* Menos margen inferior */
+    }
+    
+    /* Texto de pregunta muy compacto */
+    .texto-pregunta {
+        font-size: 1.1rem; /* Tamaño más pequeño */
+        padding: 1rem; /* Padding mínimo */
+    }
+    
+    /* Opciones de respuesta compactas */
+    .opcion-respuesta {
+        padding: 0.8rem; /* Padding muy reducido */
+        font-size: 0.9rem; /* Tamaño de fuente pequeño */
+    }
+    
+    /* Imagen de pregunta muy pequeña */
+    .imagen-pregunta img {
+        max-height: 150px; /* Altura máxima muy reducida */
+    }
+    
+    /* Retroalimentación compacta */
+    .retroalimentacion {
+        padding: 1rem; /* Padding reducido */
+        font-size: 0.95rem; /* Tamaño de fuente pequeño */
+    }
+    
+    /* Botón siguiente compacto */
+    .boton-siguiente {
+        padding: 0.8rem 1.5rem; /* Padding reducido */
+        font-size: 1rem; /* Tamaño estándar */
+    }
+    
+    /* Tarjeta de resultados compacta */
+    .tarjeta-resultados {
+        padding: 2rem 1.5rem; /* Padding ajustado */
+    }
+    
+    /* Título de resultados compacto */
+    .titulo-resultados {
+        font-size: 2rem; /* Tamaño reducido */
+        margin-bottom: 1.5rem; /* Menos margen inferior */
+    }
+    
+    /* Círculo de puntuación muy pequeño */
+    .circulo-puntuacion {
+        width: 80px; /* Ancho muy reducido */
+        height: 80px; /* Altura muy reducida */
+    }
+    
+    /* Porcentaje muy pequeño */
+    .porcentaje-puntuacion {
+        font-size: 1.1rem; /* Tamaño muy reducido */
+    }
+    
+    /* Detalles de puntuación pequeños */
+    .detalles-puntuacion p {
+        font-size: 1rem; /* Tamaño estándar */
+        margin: 0.3rem 0; /* Margen vertical reducido */
+    }
+    
+    /* Mensaje de rendimiento ajustado */
+    .mensaje-rendimiento {
+        font-size: 1.1rem; /* Tamaño reducido */
+    }
+}
+
+/* Orientación horizontal en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    /* Reducir padding vertical del encabezado */
+    .encabezado-principal {
+        padding: 1rem 0; /* Padding vertical mínimo */
+    }
+    
+    /* Título principal muy compacto */
+    .titulo-principal {
+        font-size: 1.5rem; /* Tamaño muy reducido */
+        margin-bottom: 0.2rem; /* Margen mínimo */
+    }
+    
+    /* Subtítulo muy pequeño */
+    .subtitulo {
+        font-size: 0.9rem; /* Tamaño muy pequeño */
+    }
+    
+    /* Contenedor principal ajustado */
+    .contenedor-principal {
+        padding: 0.5rem; /* Padding mínimo */
+        min-height: calc(100vh - 100px); /* Altura ajustada para landscape */
+    }
+    
+    /* Imagen de pregunta muy reducida */
+    .imagen-pregunta img {
+        max-height: 100px; /* Altura máxima muy pequeña */
+    }
+    
+    /* Tarjeta de bienvenida horizontal */
+    .tarjeta-bienvenida {
+        padding: 1rem; /* Padding muy reducido */
+    }
+    
+    /* Título de bienvenida horizontal */
+    .titulo-bienvenida {
+        font-size: 1.5rem; /* Tamaño muy reducido */
+        margin-bottom: 0.5rem; /* Margen mínimo */
+    }
+}
+
+/* Mejoras de accesibilidad para pantallas grandes */
+@media (min-width: 1200px) {
+    /* Contenedor principal más amplio */
+    .contenedor-principal {
+        max-width: 1200px; /* Ancho máximo mayor */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+    
+    /* Tarjeta de bienvenida más espaciosa */
+    .tarjeta-bienvenida {
+        padding: 4rem; /* Padding amplio */
+    }
+    
+    /* Botones de nivel con mejor distribución */
+    .botones-nivel {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas fijas */
+        gap: 2rem; /* Más espacio entre elementos */
+        max-width: 800px; /* Ancho máximo */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+    
+    /* Contenedor de opciones mejor distribuido */
+    .contenedor-opciones {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas fijas */
+        gap: 1.5rem; /* Más espacio entre opciones */
+        max-width: 600px; /* Ancho máximo */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+}

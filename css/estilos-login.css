@@ -1,0 +1,182 @@
+/* Estilos para la pantalla de login */
+
+/* Pantalla de login */
+#pantalla-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--gradiente-fondo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenedor del login */
+.contenedor-login {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+/* Tarjeta del login */
+.tarjeta-login {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: var(--radio-bordes);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--sombra-principal);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Título del login */
+.titulo-login {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtítulo del login */
+.subtitulo-login {
+  font-size: 1.1rem;
+  color: var(--color-texto-gris);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* Formulario de login */
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Campo de login */
+.campo-login {
+  text-align: left;
+}
+
+/* Etiquetas del formulario */
+.campo-login label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-texto-claro);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Inputs del formulario */
+.campo-login input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radio-bordes);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-texto-claro);
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+/* Placeholder de los inputs */
+.campo-login input::placeholder {
+  color: var(--color-texto-gris);
+}
+
+/* Focus en los inputs */
+.campo-login input:focus {
+  outline: none;
+  border-color: var(--color-dorado);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+}
+
+/* Botón de login */
+.boton-login {
+  background: var(--color-dorado);
+  color: white;
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: var(--radio-bordes);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+/* Hover del botón de login */
+.boton-login:hover {
+  background: #d63447;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+}
+
+/* Botón de logout */
+.boton-logout {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-texto-claro);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radio-bordes);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Hover del botón de logout */
+.boton-logout:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+}
+
+/* Ocultar encabezado y pie cuando está el login */
+#pantalla-login.activa ~ header,
+#pantalla-login.activa ~ main,
+#pantalla-login.activa ~ footer {
+  display: none;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .contenedor-login {
+    padding: 1rem;
+  }
+
+  .tarjeta-login {
+    padding: 2rem;
+  }
+
+  .titulo-login {
+    font-size: 2rem;
+  }
+
+  .campo-login input {
+    padding: 0.8rem;
+  }
+
+  .boton-login {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tarjeta-login {
+    padding: 1.5rem;
+  }
+
+  .titulo-login {
+    font-size: 1.8rem;
+  }
+}
